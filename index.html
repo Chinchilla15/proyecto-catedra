@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plataforma Educativa</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/media-queries.css">
     <script
     src="https://kit.fontawesome.com/aa73f4cdd9.js"
     crossorigin="anonymous"
@@ -18,6 +19,9 @@
         </h1>
         <ul class="nav-list">
             <li class="nav-list-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-list-item">
                 <a class="nav-link" href="asignaturas.html">Asignaturas</a>
             </li>
             <li class="nav-list-item">
@@ -26,38 +30,59 @@
             <li class="nav-list-item">
                 <a class="nav-link" href="horarios.html">Horarios</a>
             </li>
-            <li class="nav-list-item">
-                <a class="nav-link" href="#">Proyectos</a>
-            </li>
         </ul>
         <div class="user">
             <a href="#" class="user-link" title="Notificaciones"> <i class="fa-regular fa-bell fa-lg"></i></a>
             <a href="#" class="user-link" title="Ajustes"> <i class="fa-solid fa-gear fa-lg"></i></a>
-            <a class="user-link" href="login.html" title="Ingresar"> <i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i></a>
+            <a class="user-link" href="registrar.html" title="Registrate"> <i class="fa-solid fa-arrow-right-to-bracket fa-lg"></i></a>
             <div class="user-img"><i class="fa-solid fa-user fa-xl"></i></div>
         </div>
     </nav>
     <header>
         <div class="header-container">
             <h2 class="header-title">!Bienvenido a Quicklearn!</h2>
+            <button class="header-button" onclick="window.location.href='login.html'" class="login-button">Iniciar Sesión</button>
+            <button class="header-button" onclick="window.location.href='registrar.html'" class="login-button">Resgistrate</button>
         </div>
     </header>
     <main>
         <section class="items-container">
-            <div class="container-item">Contenido</div>
-            <div class="container-item">Contenido</div>
-            <div class="container-item">Contenido</div>
-            <div class="container-item">Contenido</div>
+            <div class="container-item">
+                <img src="./img/img1.jpg" alt="News Image 1" class="item-image" >
+                <p class="item-text">Descubre nuestra plataforma educativa en línea, diseñada para ofrecer una experiencia de aprendizaje flexible y accesible. Conoce más sobre nuestras herramientas interactivas, recursos educativos y soporte personalizado para ayudarte a alcanzar tus metas académicas.</p>
+            </div>
+            <div class="container-item">
+                <img src="./img/im2.jpg" alt="News Image 2" class="item-image">
+                <p class="item-text">Nuestra plataforma educativa en línea ofrece la oportunidad de aprender con maestros en tiempo real. Participa en clases interactivas, recibe retroalimentación inmediata y colabora con tus compañeros desde cualquier lugar. Aprovecha la flexibilidad y la calidad de la educación en línea para alcanzar tus objetivos académicos.</p>
+            </div>
+            <div class="container-item">
+                <img src="./img/img3.jpg" alt="News Image 3" class="item-image">
+                <p class="item-text">Explora las oportunidades de colaboración con otros alumnos a través de nuestra plataforma. Participa en proyectos grupales, discute temas en foros y aprovecha los espacios presenciales disponibles para un aprendizaje más enriquecedor.</p>
+            </div>
+            <div class="container-item">
+                <img src="./img/img4.jpg" alt="News Image 4" class="item-image">
+                <p class="item-text">Participa en reuniones regulares con maestros y compañeros para mejorar tu aprendizaje. Estas sesiones te permiten resolver dudas, recibir retroalimentación y colaborar en proyectos, creando un entorno de estudio más dinámico y efectivo.</p>
+            </div>
+            <div class="container-item">
+                <img src="./img/img6.png" alt="News Image 4" class="item-image">
+                <p class="item-text">Nuestra plataforma educativa en línea te permite gestionar tu tiempo de manera eficiente, facilitando un equilibrio entre tus estudios, trabajo y vida personal. Aprovecha la flexibilidad de nuestros horarios para aprender a tu propio ritmo y sin comprometer tus otras responsabilidades.</p>
+            </div>
+            <div class="container-item">
+                <img src="./img/img6.jpg" alt="News Image 4" class="item-image">
+                <p class="item-text">Participa en reuniones con profesionales de diversas industrias para conocer sus ofertas laborales y oportunidades de carrera. Estas sesiones te permitirán establecer contactos valiosos, obtener información sobre el mercado laboral y descubrir cómo puedes aplicar tus habilidades y conocimientos en el mundo real.</p>
+            </div>
         </section>
         <section class="mision-vision-info">
             <article class="mision">
                 <h3>Mision</h3>
                 <br>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis recusandae vero magnam, porro eum dolorem ea quidem quisquam id voluptatem aperiam? Dolor, deserunt soluta suscipit alias recusandae fuga doloribus iste?</article>
+                Nuestra misión es proporcionar una plataforma educativa en línea de alta calidad que permita a los estudiantes de todas las edades y orígenes acceder a recursos educativos innovadores y personalizados. Nos esforzamos por crear un entorno de aprendizaje inclusivo y flexible que fomente el crecimiento académico y personal, facilitando el acceso a herramientas interactivas, clases en tiempo real y soporte continuo. A través de nuestra plataforma, buscamos empoderar a los estudiantes para que alcancen sus metas educativas y profesionales, promoviendo la colaboración, la creatividad y el pensamiento crítico. Nos comprometemos a mantenernos a la vanguardia de la tecnología educativa, asegurando que nuestros usuarios tengan acceso a las mejores prácticas y recursos disponibles.
+            </article>
             <article class="vision">
                 <h3>Vision</h3>
                 <br>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi magnam vero enim non eaque cupiditate iusto excepturi voluptatem eum iure quis, soluta laborum? Nostrum, rem accusamus nisi temporibus deleniti labore!</article>
+                Nuestra visión es ser líderes en la educación en línea, ofreciendo una plataforma que transforme la manera en que las personas aprenden y se desarrollan profesionalmente. Aspiramos a crear un ecosistema educativo global que conecte a estudiantes, educadores y profesionales, facilitando el intercambio de conocimientos y experiencias. Nos comprometemos a innovar continuamente, integrando las últimas tecnologías y metodologías pedagógicas para proporcionar una educación de calidad, accesible y personalizada. Queremos ser reconocidos por nuestra capacidad para adaptarnos a las necesidades cambiantes de los estudiantes y del mercado laboral, preparando a nuestros usuarios para enfrentar los desafíos del futuro con confianza y competencia.
+               </article>
         </section>
     </main>
     <footer>

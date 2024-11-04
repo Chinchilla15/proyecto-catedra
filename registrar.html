@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registratte</title>
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/media-queries.css">
+    <script
+    src="https://kit.fontawesome.com/aa73f4cdd9.js"
+    crossorigin="anonymous"
+  ></script>
+</head>
+<body>
+
+    <nav>
+        <h1 class="nav-logo">
+            Quicklearn
+            <i class="fa-solid fa-book"></i>
+        </h1>
+    </nav>
+    <div class="register-container">
+        <h2>Registrarse</h2>
+        <form id="registerForm" onsubmit="register(event);">
+            <div class="input-group">
+                <input type="text" placeholder="Usuario" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Contraseña" id="password" name="password" required>
+            </div>
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+    <div class="back-to-index">
+        <a href="index.html">
+            <button type="button">Volver al Inicio</button>
+        </a>
+    </div>
+
+    <script>
+            async function register(event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        try {
+            const response = await fetch("http://localhost:3000/register", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert("Registro exitoso! Bienvenido a Quicklearn!");
+                window.location.href = "index.html"; 
+            } else {
+                alert(result.message || "Error en el registro. Inténtalo de nuevo.");
+            }
+        } catch (error) {
+            alert("An error occurred while connecting to the server.");
+            console.error("Error:", error);
+        }
+    }
+    </script>
+    
+</body>
+</html>

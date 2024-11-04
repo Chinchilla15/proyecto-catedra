@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
     <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/media-queries.css">
     <script
     src="https://kit.fontawesome.com/aa73f4cdd9.js"
     crossorigin="anonymous"
@@ -19,7 +20,7 @@
     </nav>
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
-        <form>
+        <form id="loginForm" onsubmit="login(event);">
             <div class="input-group">
                 <input type="text" placeholder="Usuario" id="username" name="username" required>
             </div>
@@ -29,5 +30,39 @@
             <button type="submit">Ingresar</button>
         </form>
     </div>
+    <div class="back-to-index">
+        <a href="index.html">
+            <button class="volver" type="button">Volver al Inicio</button>
+        </a>
+    </div>
 </body>
+    <script>
+        async function login(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const response = await fetch("http://localhost:3000/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ username, password }),
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    alert("Bienvenido a Quicklearn!");
+                    window.location.href = "index.html"; // Redireccionar
+                } else {
+                    alert("Contraseña o usuario incorrecto.");
+                }
+            } catch (error) {
+                alert("An error occurred while connecting to the server.");
+                console.error("Error:", error);
+            }
+        }
+    </script>
 </html>
