@@ -1,0 +1,127 @@
+#burger-menu {
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin: 20px;
+    position: fixed;
+    z-index: 40;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger-menu span,
+#burger-menu span:before,
+#burger-menu span:after {
+    background: white;
+    display: block;
+    height: 2px;
+    width: 20px; 
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#burger-menu span:before,
+#burger-menu span:after {
+    content: "";
+    left: 0; 
+    transform: none; 
+}
+
+#burger-menu span:before {
+    top: -8px;
+}
+
+#burger-menu span {
+    top: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#burger-menu span:after {
+    top: 8px;
+}
+
+#burger-menu.close span:before {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#burger-menu.close span {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#burger-menu.close span:after {
+    top: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.hamburger-menu.overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.side-nav-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.side-nav-list-item .nav-link {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.side-nav-list-item .nav-link:hover {
+    color: #878681;
+}
+
+@media screen and (max-width: 768px) {
+    #burger-menu {
+        display: flex; 
+    }
+
+    .nav-list, 
+    .user {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    nav {
+        justify-content: center;
+        padding: 24px 60px;
+    }
+}
