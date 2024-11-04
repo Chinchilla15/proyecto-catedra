@@ -1,0 +1,183 @@
+@media screen and (max-width: 575.98px) {
+    /* Nav */
+    nav {
+        padding: 16px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Header */
+    .header-title {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Main content */
+    main {
+        padding: 10px;
+    }
+
+    /* Asignaturas */
+    .asignaturas-item {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+    }
+
+    /* Horarios */
+    .horarios-container {
+        padding: 10px;
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    /* Login/Register */
+    .login-container,
+    .register-container {
+        width: 90%;
+        margin: 0 10px;
+        padding: 20px;
+    }
+
+    .input-group input {
+        padding: 15px 35px 15px 15px;
+    }
+
+    /* Main */
+    .items-container {
+        padding: 10px;
+    }
+
+    .container-item {
+        padding: 1rem;
+    }
+
+    .item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .mision-vision-info {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+
+    .mision,
+    .vision {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    /* Tareas */
+    .tareas-container {
+        padding: 10px;
+    }
+
+    .tarea-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tarea-icon {
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    /* Nav */
+    nav {
+        padding: 20px;
+    }
+
+    /* Header */
+    .header-title {
+        font-size: 2.5rem;
+    }
+
+    /* Asignaturas */
+    .asignaturas-item {
+        width: 80%;
+    }
+
+    /* Main  */
+    .container-item {
+        max-width: 90%;
+    }
+
+    .item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .mision-vision-info {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mision,
+    .vision {
+        max-width: 80%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    /* Asignaturas */
+    .asignaturas-item {
+        width: 45%;
+    }
+
+    /* Main page items */
+    .container-item {
+        max-width: 45%;
+    }
+
+    .mision,
+    .vision {
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container-item {
+        max-width: 500px;
+    }
+
+    .asignaturas-item {
+        width: 450px;
+    }
+}
+
+/* Landscape */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    header {
+        min-height: 12rem;
+    }
+
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .login-container,
+    .register-container {
+        margin: 60px auto;
+        padding: 15px;
+    }
+}
